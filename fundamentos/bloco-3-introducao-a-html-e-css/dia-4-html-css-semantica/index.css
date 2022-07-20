@@ -1,0 +1,24 @@
+header {
+
+}
+
+nav {
+    background-color:aquamarine;
+}
+
+nav li {
+    display: inline-block;
+    background-color:burlywood;
+    color: yellow;
+    padding: 3px 10px;
+    margin-right: 20px;
+}
+
+body {
+    background-color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
