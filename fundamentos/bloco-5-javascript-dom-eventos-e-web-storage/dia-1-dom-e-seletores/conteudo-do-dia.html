@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph">Segundo parágrafo!</p>
+    </header>
+    <script>
+      const paragraph = document.getElementById("paragraph");
+      paragraph.style.color = "red";
+      document.getElementById("page-title").innerText = "Jurassic Park";
+      let secondParagraph = document.getElementById("second-paragraph");
+      document.getElementById("second-paragraph").innerText = "Este filme narra uma fantasia, onde um homem empreendedor, porém ganancioso decide criar um parque altamente tecnológico, trazendo através de técnicas de reprodução animal avançada, os dinossauros a vida. Mas como nem tudo saí como a gente espera, a natureza decide assumir o controle, desencadeando uma série de eventos, fazendo com que nossos personagens precisem correr para salver suas vidas."
+      secondParagraph.style.textAlign = "justify";
+      document.getElementById("subtitle").innerText = "Resumo"
+      
+    </script>
+  </body>
+</html>
