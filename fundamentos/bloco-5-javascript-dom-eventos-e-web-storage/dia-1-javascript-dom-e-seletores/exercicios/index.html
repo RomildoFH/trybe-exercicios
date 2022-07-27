@@ -77,11 +77,39 @@
             changeBgCenter ('white');
 
 //  Crie e execute uma função que corrija o texto da tag <h1>.
-    
+        function corrigirH1 (){
+            let tituloCorreto = document.getElementsByTagName('h1')[0];
+            tituloCorreto.innerText = 'Exercício 5.1 - JavaScript';
+        }
+        corrigirH1 ();
 
 
 //  Crie e execute uma função que modifique todo o texto da tag <p> para maiúsculo.
+    function transformText (tagName, styleCase){
+        let transformedText = document.getElementsByTagName(tagName);
+        for (let index = 0; index < transformedText.length; index ++){        
+        transformedText[index].style.textTransform = styleCase;
+        }
+    }
+    transformText ('p', 'uppercase');
+
 //  Crie e execute uma função que exiba o conteúdo de todas as tags <p> no console.
+    function exibeTextoTags (tagName){
+        let tag = document.getElementsByTagName(tagName);
+        for (let contador = 0; contador < tag.length; contador ++){
+            console.log(tag[contador].innerHTML);
+        }
+    }
+    exibeTextoTags ('p')
+
+    //Opção 02
+    // function exibeTextoTags (){
+    //     let tag = document.getElementsByTagName('p');
+    //     for (let contador = 0; contador < tag.length; contador ++){
+    //         console.log(tag[contador].innerHTML);
+    //     }
+    // }
+    // exibeTextoTags ()   
         
     </script>
   </body>
