@@ -1,0 +1,57 @@
+<!-- 🚀 Entendeu? Então vamos praticar! Adicione o código abaixo a uma página HTML e adicione uma tag script. Você deverá fazer tudo a seguir usando somente JavaScript. 
+
+Acesse o elemento elementoOndeVoceEsta.
+Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+Acesse o primeiroFilho a partir de pai.
+Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+Agora acesse o terceiroFilho a partir de pai.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+          <section id="primeiroFilho"></section>
+          <section id="elementoOndeVoceEsta">
+            <section id="primeiroFilhoDoFilho"></section>
+            <section id="segundoEUltimoFilhoDoFilho"></section>
+          </section>
+          Atenção!
+          <section id="terceiroFilho"></section>
+          <section id="quartoEUltimoFilho"></section>
+        </section>
+      </main>
+      <script>
+        //Acesse o elemento elementoOndeVoceEsta.
+        document.querySelector('#elementoOndeVoceEsta')
+        // Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+        let elementoPai = document.querySelector('#elementoOndeVoceEsta').parentElement;
+        elementoPai.style.color = 'red'
+
+        // Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+        document.getElementById('primeiroFilho').innerText = 'Adicionando texto ao primeiro filho';
+
+        // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta.
+        document.querySelector('#elementoOndeVoceEsta').previousElementSibling;
+
+        // Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta.
+        document.querySelector('#elementoOndeVoceEsta').nextSibling; //OBS.: O texto atenção não é um elemento, sendo acessado como um nó.
+
+        // Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta.
+        document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
+
+        // Agora acesse o terceiroFilho a partir de pai.
+        elementoPai.lastElementChild.previousElementSibling; //OBS.: a variável elementoPai foi criada na questão 2
+
+        </script>
+</body>
+</html>
