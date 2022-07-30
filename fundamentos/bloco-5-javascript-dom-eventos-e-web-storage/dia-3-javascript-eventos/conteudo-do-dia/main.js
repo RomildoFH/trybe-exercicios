@@ -1,6 +1,3 @@
-
-
-
 // 1. Copie esse arquivo e edite apenas ele;
 // 1.1. Antes de começar os exercícios, use o LiveServer para dar uma olhada em como está a página no navegador.
 // 1.2. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
@@ -82,7 +79,21 @@ function recebeClick(eventoDeOrigem) {
 //   // que retorna o objeto que disparou o evento.
 // }
 
-// firstLi.addEventListener('dblclick', resetText);
+    //Inserindo função extra para reiniciar o texto das tecnologias com double-click:
+    function resetText (eventoDeOrigem){
+        let elementoClicado = document.querySelector('.tech');
+        if (elementoClicado.id === 'first-li'){
+            elementoClicado.innerHTML = 'Aqui está a primeira tecnologia que mais gostei.'
+        } else if (elementoClicado.id === 'second-li'){
+            elementoClicado.innerHTML = 'Aqui está a segunda tecnologia que mais gostei.'
+        } else {
+            elementoClicado.innerHTML = 'Aqui está a terceira tecnologia que mais gostei.'
+        }
+    }
+    for (var index = 0; index < arrayLinhas.length; index ++){
+        arrayLinhas[index].addEventListener('dblclick', resetText);
+    }
+    // firstLi.addEventListener('dblclick', resetText);
 
 // // Não precisa passar o parâmetro dentro da callback resetText. O próprio
 // // navegador fará esse trabalho por você, não é legal? Desse jeito, o
