@@ -216,15 +216,45 @@ setDayColor ();
 
 //   🚀 Bônus:
 //   Vamos adicionar compromissos ao seu calendário? Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+let ulCompromissos = document.querySelector('.task-list');
+let botaoAdicionar = document.querySelector('#btn-add');
+function adicionaCompromisso () {
+    botaoAdicionar.addEventListener('click', function () {
+        let compromissoLine = document.createElement('li');
+        let input = document.getElementById('task-input');
+        compromissoLine.innerHTML = input.value;
+        ulCompromissos.appendChild(compromissoLine);        
+    })
+}
+adicionaCompromisso ()
+
+
+
+
+
 //   Se nenhum caractere for inserido no campo input, a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
 //   Ao pressionar a tecla "enter" o evento também deverá ser disparado.
 //   Dica - Propriedade: key.
 
 
-window.onload = function carregarPagina () {
-    alert("Olá esté é o calendário de dezembro");
-//     daysCreat([29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]);
-//     createHolyDayButton ('Feriados');
-//     mostrarFeriados ();  
+// window.onload = function carregarPagina () {
+//     alert("Olá esté é o calendário de dezembro");
+// //     daysCreat([29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]);
+// //     createHolyDayButton ('Feriados');
+// //     mostrarFeriados ();  
        
-}
+// }
+
+
+
+// let ulCompromissos = document.querySelector('.task-list');
+// let botaoAdicionar = document.querySelector('#btn-add');
+// function adicionaCompromisso () {
+//     botaoAdicionar.addEventListener('click', function () {
+//         let compromissoLine = document.createElement('li');
+//         let input = document.getElementById('task-input');
+//         compromissoLine.innerHTML = input.value;
+//         ulCompromissos.appendChild(compromissoLine);
+//     })
+// }
+// adicionaCompromisso ()
