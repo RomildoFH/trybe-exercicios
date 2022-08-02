@@ -6,8 +6,6 @@ let btnFontColor = document.getElementById('btn-fontColor');
 let btnFontSize = document.getElementById('btn-fontSize');
 let btnLineHeigth = document.getElementById('btn-lineHeight');
 
-
-
 function criarCores (arrayCores) {
     let containerOpcoes = document.getElementById('option-container');
     for(let index = 0; index < arrayCores.length; index ++) {
@@ -73,3 +71,54 @@ btnFontFamily.addEventListener('click', function () {
 let fontFamilyInicial = localStorage.fontFamily;
  text.style.fontFamily = fontFamilyInicial;
  titulo.style.fontFamily = fontFamilyInicial;
+
+let arrayFontSize = ['15px', '18px', '21px', '25px'];
+function chageTextSize (arrayFontSize) {    
+    let textSizeClicks = 0;
+    btnFontSize.addEventListener('click', function () {
+        if (textSizeClicks < 3) {
+            textSizeClicks += 1;
+        } else {
+            textSizeClicks = 0;
+        }
+        text.style.fontSize = arrayFontSize[textSizeClicks];
+        localStorage.fontSize = arrayFontSize[textSizeClicks];     
+    })
+    let fontSizeInicial = localStorage.fontSize;
+    text.style.fontSize = fontSizeInicial;
+}
+chageTextSize (arrayFontSize);
+
+let arrayTituloSize = ['30px', '40px', '50px', '60px']
+function chageTituloSize (arrayTituloSize) {    
+    let textSizeClicks = 0;
+    btnFontSize.addEventListener('click', function () {
+        if (textSizeClicks < 3) {
+            textSizeClicks += 1;
+        } else {
+            textSizeClicks = 0;
+        }
+        titulo.style.fontSize = arrayTituloSize[textSizeClicks];
+        localStorage.tituloSize = arrayTituloSize[textSizeClicks];     
+    })
+    let tituloSizeInicial = localStorage.tituloSize;
+    titulo.style.fontSize = tituloSizeInicial;
+}
+chageTituloSize (arrayTituloSize);
+
+let arrayLineHeight = ['15px', '18px', '21px', '25px', '28px', '31px', '35px'];
+function chageLineHeight (arrayLineHeight) {    
+    let lineHeigthClicks = 0;
+    btnLineHeigth.addEventListener('click', function () {
+        if (lineHeigthClicks < 6) {
+            lineHeigthClicks += 1;
+        } else {
+            lineHeigthClicks = 0;
+        }
+        text.style.lineHeight = arrayLineHeight[lineHeigthClicks];
+        localStorage.lineHeight = arrayLineHeight[lineHeigthClicks];     
+    })
+    let lineHeigthInicial = localStorage.lineHeight;
+    text.style.lineHeight = lineHeigthInicial;
+}
+chageLineHeight (arrayLineHeight);
