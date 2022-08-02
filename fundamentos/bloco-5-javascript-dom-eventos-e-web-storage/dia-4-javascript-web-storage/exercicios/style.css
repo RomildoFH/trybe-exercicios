@@ -1,0 +1,30 @@
+.cores {
+    border-radius: 100%;
+    border-color: black;
+    border: 1px;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    display: inline-block;    
+    margin-left: 3px;
+    box-shadow: 2px black;
+    padding: 1px black;
+}
+
+#menu-personalizacao {
+    display: inline-block;
+}
+
+#option-container {
+    display: inline-block;
+    margin-left: 50%;
+}
+
+#option-container div:hover {
+    width: 40px;
+    height: 40px;
+}
+
+#texto {
+    font-size: 15px;
+}
