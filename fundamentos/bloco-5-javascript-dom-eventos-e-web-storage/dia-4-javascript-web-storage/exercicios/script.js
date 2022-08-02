@@ -57,9 +57,19 @@ function changeFontColor () {
  let fontColorInicial = localStorage.fontColor;
  text.style.color = fontColorInicial;
  titulo.style.color = fontColorInicial;
+
+
 let arrayFontFamily = ['serif', 'helvetica', 'cursive', 'monospace'];
-
-
-// function changeFontFamily () {
-//     btnFontFamily.addEventListener('click')
-// }
+let textFamilyClicks = 0;
+btnFontFamily.addEventListener('click', function () {
+    if (textFamilyClicks < 3) {
+        textFamilyClicks += 1;
+    } else {
+        textFamilyClicks = 0;
+    }
+    text.style.fontFamily = arrayFontFamily[textFamilyClicks];
+    localStorage.fontFamily = arrayFontFamily[textFamilyClicks];
+})
+let fontFamilyInicial = localStorage.fontFamily;
+ text.style.fontFamily = fontFamilyInicial;
+ titulo.style.fontFamily = fontFamilyInicial;
