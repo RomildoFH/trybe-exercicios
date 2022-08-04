@@ -16,7 +16,28 @@
             <div classe="line-content">
                 <label for="full-name">Nome completo</label><br>
                     <input type="text" name="nome" id="full-name" placeholder="Insira seu nome" autocomplete="off">
-            </div>           
+            </div>
+            <div class="line-content">
+                <fieldset>
+                    <legend>Tipo de palestra</legend>
+                    <input type="radio" name="talk-type" id="talk-type1" value="palco-principal">
+                    <label for="talk-type1">Palco principal</label>
+                    <input type="radio" name="talk-type" id="talk-type2" value="workshop">
+                    <label for="talk-type2">Workshop</label>
+                </fieldset>                
+            </div>
+            <div class="line-content">
+                <label for="">Tamanho da camiseta</label>
+                <select name="t-shirt" id="t-shirt-size">
+                    <option value="p">Pequena</option>
+                    <option value="m">Média</option>
+                    <option value="g" selected>Grande</option>
+                    <option value="xg">Extra grande</option>
+                </select>
+            </div>
+            <div class="line-content">   
+                <button type="submit">Enviar</button>
+            </div>        
         </main>
     </form>
 </body>
