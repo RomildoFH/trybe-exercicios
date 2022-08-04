@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TrybeTrip</title>
+</head>
+<body>
+    <header>
+        <h1>Formulário de viagem</h1>
+        <p>Preencha com seus dados para garantir sua vaga!</p>
+    </header>
+    <form action="" method="get" class="ticket-form">
+        <main class="form-row">
+            <div classe="line-content">
+                <label for="nome-viajante">Nome</label>
+                <input type="text" name="nome" id="nome-viajante" placeholder="Insira seu nome aqui" minlength="10" maxlength="40" >
+            </div>
+            <div classe="line-content">
+                <label for="email-viajante">Email</label>
+                <input type="email" name="email" id="email-viajante" placeholder="Insira seu email" minlength="10" maxlength="40" >
+            </div>
+            <div classe="line-content">
+                <fieldset>
+                    <legend>Escolha seu destino</legend>                    
+                    <input type="radio" name="destino" id="destino1" checked>
+                    <label for="destino1">Recife/PE</label>
+                    <input type="radio" name="destino" id="destino2">
+                    <label for="destino2">Natal/RN</label>
+                    <input type="radio" name="destino" id="destino3">
+                    <label for="destino3">João Pessoa/PB</label>
+                    <input type="radio" name="destino" id="destino4">
+                    <label for="destino4">Porto de Galinhas/PE</label>
+                </fieldset>                
+            </div>
+            <div class="line-content">
+                <label for="resposta">Como são suas férias perfeitas?</label><br>
+                <textarea name="resposta" id="resposta" cols="30" rows="10" maxlength="800" ></textarea>
+            </div>
+            <div classe="line-content">
+                <label for="trip-date">Data</label>
+                <input type="date" name="data" id="trip-date" >
+            </div>
+            <div classe="line-content">
+                <input type="checkbox" name="termos" id="termo-de-compromisso" >
+                <label for="termo-de-compromisso">Você aceita nossos termos?</label><br>
+                <input type="checkbox" name="propaganda" id="propagranda">
+                <label for="propagranda">Você aceita emails contendo nossa publicidade?</label>
+            </div>
+            <div classe="line-content">
+                <button type="submit" id="btn-enviar">Enviar</button>
+                <button type="reset" id="btn-apagar">Apagar</button>
+            </div>
+        </main>
+    </form>
+    <script src="./script.js"></script>
+</body>
+</html>
