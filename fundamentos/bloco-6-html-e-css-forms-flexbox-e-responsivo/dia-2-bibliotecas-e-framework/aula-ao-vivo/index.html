@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  <title>Submeter Palestra</title>
+</head>
+<body>
+  <header class="container text-center">
+    <h1 class="display-1">Submeter Palestra</h1>
+    <p class="lead">Quer palestrar na nossa conferência? Preencha o formulário!</p>
+  </header>
+
+  <form action="" method="post" >
+    <main >
+      <div >
+        <label for="full-name">Nome completo</label>
+        <input type="text" name="nome" id="full-name" placeholder="Insira seu nome" autocomplete="off" required>
+      </div>
+
+      <div >
+        <fieldset>
+          <legend>Tipo de palestra</legend>
+
+          <input type="radio" name="talk-type" id="talk-type1" value="Palco-principal">
+          <label for="talk-type1">Palco principal</label>
+          
+          <input type="radio" name="talk-type" id="talk-type2" value="workshop" checked>
+          <label for="talk-type2">Workshop</label>
+        </fieldset>
+      </div>
+
+      <div >
+        <label for="">Tamanho da camiseta</label>
+
+        <select name="t-shirt" id="t-shirt-size">
+          <option value="p">Pequena</option>
+          <option value="m">Média</option>
+          <option value="g" selected>Grande</option>
+          <option value="xg">Extra grande</option>
+        </select>
+      </div>
+
+      <div >
+        <label for="abstract">Resumo da sua palestra</label>
+
+        <textarea name="abstract" id="abstract" cols="30" rows="10" placeholder="Descreva sua palestra" maxlength="500" required></textarea>
+      </div>
+
+      <div >
+        <input type="checkbox" name="available" id="available">
+
+        <label for="available">Eu estou disponível no dia da plaestra</label>
+      </div>
+
+      <div >
+        <button type="submit">Enviar</button>
+      </div>
+    </main>
+  </form>
+  
+</body>
+</html>
