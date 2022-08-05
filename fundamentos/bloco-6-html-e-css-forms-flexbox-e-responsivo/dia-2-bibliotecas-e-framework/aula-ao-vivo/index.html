@@ -15,24 +15,19 @@
   </header>
 
   <form action="" method="post" >
-    <main >
-      <div >
-        <label for="full-name">Nome completo</label>
-        <input type="text" name="nome" id="full-name" placeholder="Insira seu nome" autocomplete="off" required>
+    <main class="container">
+      <div class="mb-3">
+        <label class="form-label" for="full-name">Nome completo</label>
+        <input class="form-control" type="text" name="nome" id="full-name" placeholder="Insira seu nome" autocomplete="off" required>
       </div>
-
-      <div >
-        <fieldset>
-          <legend>Tipo de palestra</legend>
-
-          <input type="radio" name="talk-type" id="talk-type1" value="Palco-principal">
-          <label for="talk-type1">Palco principal</label>
+      <div >        
+          <p class="lead">Tipo de palestra</p>
+          <input class="form-check-input" type="radio" name="talk-type" id="talk-type1" value="Palco-principal">
+          <label class="form-check-label" for="talk-type1">Palco principal</label>
           
-          <input type="radio" name="talk-type" id="talk-type2" value="workshop" checked>
-          <label for="talk-type2">Workshop</label>
-        </fieldset>
+          <input class="form-check-input" type="radio" name="talk-type" id="talk-type2" value="workshop" checked>
+          <label class="form-check-label" for="talk-type2">Workshop</label>        
       </div>
-
       <div >
         <label for="">Tamanho da camiseta</label>
 
