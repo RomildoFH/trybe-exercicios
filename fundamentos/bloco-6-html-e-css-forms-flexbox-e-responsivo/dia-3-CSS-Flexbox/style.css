@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menu-container {
+    background-color: grey;
+    padding: 20px 0px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.menu-ola {
+    border: 1px solid red;
+    width: 300px;
+}
+
+.menu-oi {
+    border: 1px solid yellow;
+    width: 300px;
+}
