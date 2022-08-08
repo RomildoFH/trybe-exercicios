@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <title>TrybeTrip</title>
+</head>
+<body class="p-3 mb-2 bg-success text-white">
+    <header class="container text-center">
+        <h1 class="display-1">Formulário de viagem</h1>
+        <p class="lead">Preencha com seus dados para garantir sua vaga!</p>
+    </header>
+    <form action="" method="get" >
+        <main class="container">
+            <div class="mb-3">
+                <label class="form-label" for="nome-viajante">Nome</label>
+                <input class="form-control" type="text" name="nome" id="nome-viajante" placeholder="Insira seu nome aqui" minlength="10" maxlength="40" >
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="email-viajante">Email</label>
+                <input class="form-control" type="email" name="email" id="email-viajante" placeholder="Insira seu email" minlength="10" maxlength="40" >
+            </div>
+            <div class="mb-3">                
+                <p>Escolha seu destino</p>                    
+                <input type="radio" name="destino" id="destino1" checked>
+                <label for="destino1">Recife/PE</label>
+                <input type="radio" name="destino" id="destino2">
+                <label for="destino2">Natal/RN</label>
+                <input type="radio" name="destino" id="destino3">
+                <label for="destino3">João Pessoa/PB</label>
+                <input type="radio" name="destino" id="destino4">
+                <label for="destino4">Porto de Galinhas/PE<label>                               
+            </div>
+            <div >
+                <label for="resposta">Como são suas férias perfeitas?</label><br>
+                <textarea name="resposta" id="resposta" cols="30" rows="10" maxlength="800" ></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="trip-date">Data</label>
+                <input type="date" name="data" id="trip-date" >
+            </div>
+            <div class="mb-3">
+                <input type="checkbox" name="termos" id="termo-de-compromisso" >
+                <label for="termo-de-compromisso">Você aceita nossos termos?</label><br>
+                <input type="checkbox" name="propaganda" id="propagranda">
+                <label for="propagranda">Você aceita emails contendo nossa publicidade?</label>
+            </div>
+            <div class="mb-3">
+                <button type="submit" id="btn-enviar">Enviar</button>
+                <button type="reset" id="btn-apagar">Apagar</button>
+            </div>
+        </main>
+    </form>
+    <!-- <script src="./script.js"></script> -->
+</body>
+</html>
