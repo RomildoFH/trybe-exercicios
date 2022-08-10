@@ -76,3 +76,21 @@ header nav {
     padding: 20px 50px;
     text-transform: uppercase;    
 }
+
+@media screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+
+    header:nth-child(1) {
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+    }
+}
