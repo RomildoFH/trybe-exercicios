@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: sans-serif;    
+}
+
+nav, ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    opacity: 0.9;
+    padding: 0 10px;
+}
+
+a:hover {
+    opacity: 1;
+}
+
+a:visited, a:hover {
+    color: inherit;
+}
+
+header {
+    background-color: white;
+    width: 100%;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    padding: 20px 50px;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    max-width: 200px;
+}
+
+header nav {
+    display: flex;
+}
+
+.hero {
+    background-image: url(https://img.myloview.com.br/adesivos/paisagem-natural-de-um-lago-700-72395006.jpg);
+    background-size: cover;
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px black;
+}
+
+.hero h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px black;
+}
+
+.hero .btn {
+    background-color: white;
+    border-radius: 4px;
+    color: #191c03;
+    padding: 20px 50px;
+    text-transform: uppercase;    
+}
