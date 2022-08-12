@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    background-color: rgb(50, 167, 145);
+    max-height: 150px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+
+header img {
+    max-width: 100px;
+}
+
+form input {
+    height: 38px;
+    margin-left: 3px;
+    font-size: 18px;
+    width: 200px;
+}
+
+#trybewarts-header-title {
+    color: white;
+    font-weight: 700;
+    font-family: fantasy;
+    font-size: 60px;
+}
+
+#trybewarts-header-title:hover {
+    color: white;
+    font-weight: 700;
+    font-family: fantasy;
+    font-size: 60px;
+    text-shadow: 5px 5px 5px yellow;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#evaluation-form {
+    display: flex;
+    width: 675px;
+    flex-direction: column;
+}
+
+#trybewarts-forms-logo {
+    height: 500px;
+}
+
+.informacao-pessoal {
+    display: flex;
+    margin: 2px 0px;
+}
+
+.informacao-pessoal #input-lastname {
+    flex-grow: 1;
+}
+
+.informacao-pessoal #input-email {
+    flex-grow: 1;
+}
+
+#escolha-familia {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+}
+
+#label-family {
+    font-size: 25px;
+}
+
+.opcao-familia {
+    font-size: 20px;
+    margin: 5px 0px;
+}
+
+#familia-conteudo {
+    display: flex;
+    justify-content: space-between;
+}
+
+#conteudo {
+    flex-basis: 70%;
+    display: flex;    
+    flex-direction: column;
+    justify-content: space-between;    
+}
+
+#label-content {
+    font-size: 25px;
+    text-align: center;
+}
+
+.subcontainer {
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.content-option {
+    display: inline-block;
+    font-size: 20px;
+    width: 30%;
+}
+
+#label-rate {
+    font-size: 25px;
+    text-align: center;
+}
+
+#lista-avaliacao {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+#agreement-container {
+    margin: 10px 0px;
+}
+
+.avaliacao-check {
+    display: flex;
+    flex-direction: column;
+}
+
+#submit-btn {
+    background-color: rgb(50, 167, 145);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    width: 90%;
+    align-self: center;
+}
+
+#submit-btn:hover {
+    background-color: rgb(50, 167, 145);
+    opacity: 0.9;
+    color: white;
+    font-size: 20px;
+    align-self: center;
+    border: 3px double yellow;
+}
+
+#rodape {
+    display: flex;
+    height: 50px;
+    margin-top: 50px;
+    background-color: rgb(50, 167, 145);
+    justify-content: center;
+    align-items: center;    
+}
+
+#rodape p {       
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: fantasy;
+}
+
+.contador {
+    display: flex;
+    font-size: 15px;
+}
+
+#form-data {
+    display: none;
+}
