@@ -21,45 +21,80 @@ const mage = {
   const battleMembers = { mage, warrior, dragon };
 
   const dragonDamage = () => {
-    let dano = Math.floor(Math.random() * ((dragon.strength) - 15 + 1) ) + 15;
-    dragon.damage = dano;
+    if(dragon.healthPoints > 0) {
+        let dano = Math.floor(Math.random() * ((dragon.strength) - 15 + 1) ) + 15;
+        dragon.damage = dano;
+    } else {
+        dragon.damage = 0;
+    }
   }
 
   const warriorDamage = () => {
-    let dano = Math.floor(Math.random() * ((warrior.strength * warrior.weaponDmg) - warrior.strength + 1) ) + warrior.strength;
-    warrior.damage = dano;
+    if(warrior.healthPoints > 0 && dragon.healthPoints > 0) {
+        let dano = Math.floor(Math.random() * ((warrior.strength * warrior.weaponDmg) - warrior.strength + 1) ) + warrior.strength;
+        warrior.damage = dano;
+    } else {
+        warrior.damage = 0;
+    }
   }
 
 const mageDamage = () => {
     let damage = 0;
-    if(mage.mana > 15) {
-        damage = Math.floor(Math.random() * ((mage.intelligence) * 2 - mage.intelligence + 1) ) + mage.intelligence;        
+    if(mage.mana > 15 && dragon.healthPoints > 0) {
+        damage = Math.floor(Math.random() * ((mage.intelligence) * 2 - mage.intelligence + 1) ) + mage.intelligence;   
+        mage.damage = damage;     
+    } else {
+        mage.damage = 0;
     }
-    return damage;
+    return mage.damage;
 }
 
 const mageManaRefresh = () => {
-    if(mage.mana > 15) {
+    if(mage.mana > 15 && mage.healthPoints > 0) {
         mage.mana = mage.mana - 15;
     } else {        
         mage.mana = mage.mana - 0;
-        return(`Não possui mana suficiente`);
+        mage.mana = `Não possui mana suficiente`;
     }
     return mage.mana;
 }
 
 const mageDamageAndManaSpent = () => {    
-        mage.damage = mageDamage();
-        mage.mana = mageManaRefresh();
+    mage.mana = mageManaRefresh();
+    mage.damage = mageDamage();
+        
+}
+
+const dragonHealth = () => {
+    dragon.healthPoints = dragon.healthPoints - (warrior.damage + mage.damage);    
+}
+const warriorHealth = () => {
+    warrior.healthPoints = warrior.healthPoints - dragon.damage;    
+}
+const mageHealth = () => {
+    mage.healthPoints = mage.healthPoints - dragon.damage;    
 }
 
  const nextTurn = () => {
-    dragonDamage();
-    warriorDamage();
-    mageDamageAndManaSpent();
+    if(dragon.healthPoints > 0) {
+        dragonDamage();   
+        warriorDamage();
+        mageDamageAndManaSpent();
+        dragonHealth();
+        warriorHealth();
+        mageHealth();
+        console.log(battleMembers);
+    } else {
+        warrior.damage = 0;
+        mage.damage = 0;
+        dragon.damage = 0;
+        console.log(battleMembers);
+        console.log(`Congratulations, you win!!`);
+    }
  }
- console.log(battleMembers);
  nextTurn();
- console.log(battleMembers);
  nextTurn();
- console.log(battleMembers);
+ nextTurn();
+ nextTurn();
+ nextTurn();
+ nextTurn();
