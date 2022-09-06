@@ -15,6 +15,6 @@ const summationOf = (number) => {
     return summation;
 };
 
-console.log(summationOf(2));
+console.log(summationOf());
 
 module.exports = {sum, summationOf};
