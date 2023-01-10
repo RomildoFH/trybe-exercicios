@@ -1,8 +1,0 @@
-Internet
-Unix
-Bash
-Office
-English
-Lean Six Sigma
-Java Script
-CSS
