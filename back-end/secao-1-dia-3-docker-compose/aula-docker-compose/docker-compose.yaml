@@ -10,6 +10,8 @@ services:
     restart: on-failure
     ports:
       - 3001:3001
+    environment:
+      - DB_HOST=database
   database:
     image: betrybe/docker-compose-example-database:v1
     restart: on-failure
