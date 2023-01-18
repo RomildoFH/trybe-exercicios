@@ -1,0 +1,27 @@
+version: '3' # versão que o arquivo docker-compose vai utilizar
+
+services: # a estrutura é baseada em identação
+  web:
+    image: nginx
+    volumes:
+      - ./public_html:/usr/share/nginx/html # '-' siginifica lista neste caso lista de volumes
+    ports:
+      - 8081:80
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    platform: linux/x86_64 # necessário informar plataforma caso o computador local tenha plataforma diferente daquela que será utilizada
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+    - 3307:3306
+    volumes:
+      - ./db:/var/lib/mysql 
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 1m30s
+      timeout: 30s
+      retries: 5
+      start_period: 30s

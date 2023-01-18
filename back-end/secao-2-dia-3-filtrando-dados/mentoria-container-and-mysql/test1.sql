@@ -1,0 +1,1 @@
+SELECT 'Este arquivo foi criado no MYSQL quando container criado por comando';
