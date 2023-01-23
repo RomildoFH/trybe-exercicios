@@ -1,0 +1,2 @@
+SELECT SQRT(9); -- 3
+SELECT SQRT(16); -- 4
