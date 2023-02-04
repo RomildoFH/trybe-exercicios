@@ -34,7 +34,7 @@ router.get('/:id', async (req, res) => {
     res.status(200).json(result);
   } catch (error) {
     console.log(error);
-    res.status(500).json({ message: `Ocorreu um erro ao tentar consultar dados da pessoa cujo id é ${id}` })
+    res.status(500).json({ message: error.sqlMessage })
   }
 });
 
