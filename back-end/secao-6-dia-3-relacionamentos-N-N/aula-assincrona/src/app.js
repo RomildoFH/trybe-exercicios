@@ -12,4 +12,6 @@ app.get('/employees/:id', employee.getById);
 
 app.get('/employees', employee.getAll);
 
+app.post('/employees', employee.insert);
+
 module.exports = app;
