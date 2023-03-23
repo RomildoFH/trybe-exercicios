@@ -36,7 +36,10 @@ export default class Pagamento {
     this._descricao = value;
   }
 
-  // public pagar() {
-  //   }
-  // }
+  public pagar() {
+    this.conta.debito(this.valor);
+    console.log('Pagamento genérico efetuado');
+    console.log('valor', this.valor);
+    console.log('Processando pagmento...');
+  }
 }
