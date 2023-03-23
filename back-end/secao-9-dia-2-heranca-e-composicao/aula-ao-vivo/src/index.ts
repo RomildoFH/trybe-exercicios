@@ -1,33 +1,13 @@
 import Conta from './model/Conta';
-import Pagamento from './model/Pagamento';
+import PagamentoBoleto from './model/PagamentoBoleto';
 
-const contaCaio = new Conta(5000);
+const contaMirella = new Conta(500);
+console.log(contaMirella);
 
-console.log(contaCaio.saldo);
+const today: Date = new Date();
 
-contaCaio.saldo = 9000; // utilizando set saldo, não é comum utilizar desta forma.
+const boletoNet = new PagamentoBoleto(today, contaMirella, 100);
 
-console.log(contaCaio.saldo);
-
-contaCaio.debito(7000);
-
-console.log(contaCaio.saldo);
-
-contaCaio.debito(3000); // vai retornar erro pois o saldo neste ponto é de 2000
-
-console.log(contaCaio.saldo);
-
-const amanha = new Date();
-amanha.setDate(amanha.getDate() + 1);
-
-const pagamento = new Pagamento(contaCaio, 15.00, amanha, 'cartao');
-
-pagamento.pagar();
-
-const pagamento2 = new Pagamento(contaCaio, 1000.00, amanha, 'boleto');
-
-pagamento2.pagar();
-
-const pagamento3 = new Pagamento(contaCaio, 1000.00, amanha, 'pix');
-
-pagamento3.pagar();
+boletoNet.pagar();
+console.log('Valor a ser pago', boletoNet.valor);
+console.log('Saldo restante', contaMirella.saldo);
