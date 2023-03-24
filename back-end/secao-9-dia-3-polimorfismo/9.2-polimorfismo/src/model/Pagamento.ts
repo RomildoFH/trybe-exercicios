@@ -7,6 +7,7 @@ export default abstract class Pagamento {
   private _valor: number;
   private _descricao: string;
   private _dolar: number;
+  public static pagamentosGerados = 0;
 
   constructor(
     conta: Conta,
@@ -17,6 +18,7 @@ export default abstract class Pagamento {
     this._valor = valor;
     this._descricao = descricao;
     this._dolar = 5.14;
+    Pagamento.pagamentosGerados += 1;
   }
 
   get conta() {

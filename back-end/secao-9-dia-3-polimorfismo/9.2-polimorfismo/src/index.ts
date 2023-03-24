@@ -1,5 +1,5 @@
 import Conta from './model/Conta';
-// import Pagamento from './model/Pagamento';
+import Pagamento from './model/Pagamento';
 import PagamentoBoleto from './model/PagamentoBoleto';
 import PagamentoCartao from './model/PagamentoCartao';
 import PagamentoPix from './model/PagamentoPix';
@@ -33,3 +33,6 @@ console.log(TEXTO_SALDO, contaMirella.saldo);
 // console.log('Saldo conta =', pagamentoGenerico, contaMirella.saldo);
 
 console.log(pixLavagemCarro.valorDoDorlar());
+
+console.log('Quantos pagamentos foram gerados');
+console.log(Pagamento.pagamentosGerados);
