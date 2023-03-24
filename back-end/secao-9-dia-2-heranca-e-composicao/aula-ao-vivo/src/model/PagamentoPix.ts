@@ -15,6 +15,7 @@ export default class PagamentoPix extends Pagamento {
     console.log('Processando pagamento ...');
     this.conta.debito(this.valor);
     console.log('Saldo restante:', this.conta.saldo);
+    console.log('Valor do dolar: ', this.valorDoDorlar());
     console.log('-------------------------------');
   }
 }

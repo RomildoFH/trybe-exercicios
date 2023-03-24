@@ -1,10 +1,11 @@
 /* eslint-disable max-params */
 import Conta from './Conta';
 
-export default class Pagamento {
+export default abstract class Pagamento {
   private _conta: Conta;
   private _valor: number;
   private _descricao: string;
+  private _dolar: number;
 
   constructor(
     conta: Conta,
@@ -14,6 +15,7 @@ export default class Pagamento {
     this._conta = conta;
     this._valor = valor;
     this._descricao = descricao;
+    this._dolar = 5.14;
   }
 
   get conta() {
@@ -36,10 +38,9 @@ export default class Pagamento {
     this._descricao = value;
   }
 
-  public pagar() {
-    this.conta.debito(this.valor);
-    console.log('Pagamento genérico efetuado');
-    console.log('valor', this.valor);
-    console.log('Processando pagmento...');
+  protected abstract pagar(): void; // como a classe é abstrata seus métodos não têm implementação
+
+  public valorDoDorlar(): number {
+    return this._dolar;
   }
 }

@@ -1,5 +1,5 @@
 import Conta from './model/Conta';
-import Pagamento from './model/Pagamento';
+// import Pagamento from './model/Pagamento';
 import PagamentoBoleto from './model/PagamentoBoleto';
 import PagamentoCartao from './model/PagamentoCartao';
 import PagamentoPix from './model/PagamentoPix';
@@ -25,6 +25,8 @@ const pixLavagemCarro = new PagamentoPix(contaMirella, 70);
 console.log(pixLavagemCarro);
 console.log('Saldo restante', contaMirella.saldo);
 
-const pagamentoGenerico = new Pagamento(contaMirella, 1, 'genérico');
-pagamentoGenerico.pagar();
-console.log('Saldo conta =', pagamentoGenerico, contaMirella.saldo);
+// const pagamentoGenerico = new Pagamento(contaMirella, 1, 'genérico'); // classe abstrata não permite ser instanciada
+// pagamentoGenerico.pagar();
+// console.log('Saldo conta =', pagamentoGenerico, contaMirella.saldo);
+
+console.log(pixLavagemCarro.valorDoDorlar());
