@@ -8,6 +8,7 @@ export default class PagamentoCartao extends Pagamento {
 
   public pagar() {
     console.log('Pagando via Cartão');
+    console.log('Código da Trasação: ', this.gerarCodigo());
     console.log('Saldo conta:', this.conta.saldo);
     console.log('Descrição:', this.descricao);
     console.log('Valor:', this.valor);

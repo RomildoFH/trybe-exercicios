@@ -1,4 +1,5 @@
 /* eslint-disable max-params */
+import crypto from 'node:crypto';
 import Conta from './Conta';
 
 export default abstract class Pagamento {
@@ -42,5 +43,11 @@ export default abstract class Pagamento {
 
   public valorDoDorlar(): number {
     return this._dolar;
+  }
+
+  protected gerarCodigo(): string {
+    const uuid = crypto.randomUUID();
+    const timeStamp = new Date().getTime();
+    return `${timeStamp}-${uuid}-${this.descricao}`;
   }
 }

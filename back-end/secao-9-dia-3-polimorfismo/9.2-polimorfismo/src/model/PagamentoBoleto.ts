@@ -48,6 +48,7 @@ export default class PagamentoBoleto extends Pagamento {
 
   public pagar() {
     console.log('Pagando via Boleto');
+    console.log('Código da transação: ', this.gerarCodigo());
     console.log('Saldo conta:', this.conta.saldo);
     console.log('Dados para pagamento boleto:');
     console.log('Descrição:', this.descricao);
@@ -66,5 +67,10 @@ export default class PagamentoBoleto extends Pagamento {
 
   private estaVencido() {
     return this._vencimento.getTime() < new Date().getTime();
+  }
+
+  protected gerarCodigo(): string {
+    const padrao = super.gerarCodigo();
+    return `${padrao}-${this.vencimento}`;
   }
 }
