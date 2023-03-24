@@ -1,4 +1,5 @@
-// import Pizza from "./model/Pizza";
+import Pizza from "./model/Pizza";
+import PizzaChocolate from "./model/PizzaChocolate";
 import PizzaMargherita from "./model/PizzaMargherita";
 import PizzaPepperoni from "./model/PizzaPepperoni";
 
@@ -17,3 +18,19 @@ console.log(pizza2.makePizza());
 const pizza3 = new PizzaMargherita('extra-large', true);
 console.log(pizza3);
 console.log(pizza3.makePizza());
+
+const pizza4 = new PizzaChocolate('medium');
+console.log(pizza4);
+console.log(pizza4.makePizza());
+
+process.stdout.write('Quantidde de pizzas produzidas = ');
+process.stdout.write(Pizza.quantidadePizzas);
+console.log('');
+
+const pizza5 = new PizzaMargherita('medium', true);
+console.log(pizza5);
+console.log(pizza5.makePizza());
+
+process.stdout.write('Quantidde de pizzas produzidas = ');
+process.stdout.write(Pizza.quantidadePizzas);
+console.log('');
