@@ -9,4 +9,10 @@ export default class PizzaPepperoni extends Pizza {
   makePizza(): string {
     return `Pepperoni - Size: ${this.size}, ${this.ingredients}`
   };
+
+  public printPrice(): string {
+    if (this.size === 'large') return 'Price: R$ 60';
+    if (this.size === 'medium') return 'Price: R$ 30';
+    return 'Price: R$ 100';
+  }
 }
