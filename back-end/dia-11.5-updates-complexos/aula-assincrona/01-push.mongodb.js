@@ -1,0 +1,17 @@
+use ('sales');
+db.supplies.updateOne(
+  { _id: 1 },
+  {
+    $push: {
+      items: {
+        "name": "notepad",
+        "price":  35.29,
+        "quantity": 2,
+      },
+    },
+  },
+  { upsert: true },
+);
+
+use ('sales');
+db.supplies.find();
