@@ -1,9 +1,0 @@
-/secao-1-dia-3-docker-compose/meu-nginx/db
-node_modules
-db
-
-/secao-2-dia-3-filtrando-dados/mentoria-container-and-mysql/data
-/secao-2-dia-4-manipulando-tabelas/aula-ao-vvo/data
-/secao-2-dia-4-manipulando-tabelas/aula-assincrona/data
-/secao-3-dia-2-descomplicando-joins/aula-assincrona/data
-data/
